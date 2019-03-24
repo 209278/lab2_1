@@ -26,7 +26,16 @@ public class BinarySearchTest {
     public void oneElementAndFound(){
         int[] seq = {1};
         int key = 1;
+        
         elementFound(seq, key);
+    }
+
+    @Test
+    public void oneElementAndNotFound(){
+        int[] seq = {1};
+        int key = 2;
+
+        elementNotFound(seq, key);
     }
 
     public void elementFound(int[] SEQ, int KEY) {
