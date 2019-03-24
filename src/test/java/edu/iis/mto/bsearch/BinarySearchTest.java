@@ -62,6 +62,14 @@ public class BinarySearchTest {
         elementFound(seq, key);
     }
 
+    @Test
+    public void manyElementsAndKeyNotFound(){
+        int[] seq = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int key = 11;
+
+        elementNotFound(seq, key);
+    }
+
 
 
     public void elementFound(int[] SEQ, int KEY) {
