@@ -26,7 +26,7 @@ public class BinarySearchTest {
     public void oneElementAndFound(){
         int[] seq = {1};
         int key = 1;
-        
+
         elementFound(seq, key);
     }
 
@@ -36,6 +36,14 @@ public class BinarySearchTest {
         int key = 2;
 
         elementNotFound(seq, key);
+    }
+
+    @Test
+    public void manyElementsAndKeyAtFirstPosition(){
+        int[] seq = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int key = 1;
+
+        elementFound(seq, key);
     }
 
     public void elementFound(int[] SEQ, int KEY) {
