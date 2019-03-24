@@ -7,9 +7,31 @@ import static org.junit.Assert.*;
 public class BinarySearchTest {
 
     @Test
-    public void elementFound() {
-        int[] seq = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    public void emptySeq() {
+        int[] seq = {};
         int key = 5;
+
+        try{
+            BinarySearch.search(key, seq);
+            assertTrue(false);
+        }catch (IllegalArgumentException e){
+            assertTrue(true);
+        }catch (Exception e){
+            assertTrue(false);
+        }
+    }
+
+
+    @Test
+    public void oneElementAndFound(){
+        int[] seq = {1};
+        int key = 1;
+        elementFound(seq, key);
+    }
+
+    public void elementFound(int[] SEQ, int KEY) {
+        int[] seq = SEQ;
+        int key = KEY;
 
         SearchResult searchResult = BinarySearch.search(key, seq);
 
@@ -17,20 +39,7 @@ public class BinarySearchTest {
         assertEquals( key, seq[searchResult.getPosition()]);
     }
 
-    @Test
-    public void emptySeq() {
-        int[] seq = {};
-        int key = 5;
-
-        try{
-            BinarySearch.search(key, seq);
-        }catch (Exception e){
-            assertEquals(new IllegalArgumentException(), e);
-        }
-    }
-
-    @Test
-    public void elementNotFound() {
+    public void elementNotFound(int[] SEQ, int KEY) {
         int[] seq = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         int key = 11;
 
