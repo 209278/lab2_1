@@ -54,6 +54,14 @@ public class BinarySearchTest {
         elementFound(seq, key);
     }
 
+    @Test
+    public void manyElementsAndKeyAtMiddlePosition(){
+        int[] seq = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int key = 5;
+
+        elementFound(seq, key);
+    }
+
 
 
     public void elementFound(int[] SEQ, int KEY) {
