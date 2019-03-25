@@ -6,6 +6,7 @@ import static org.junit.Assert.*;
 
 public class BinarySearchTest {
 
+    //Zajomość implemenacji wyjaśniała dlaczego nie był rzucany wyjątek IllegalArgumentException (brak sprawdzenia i throw)
     @Test
     public void emptySeq() {
         int[] seq = {};
@@ -17,7 +18,7 @@ public class BinarySearchTest {
         }catch (IllegalArgumentException e){
             assertTrue(true);
         }catch (Exception e){
-            fail("different Exception")
+            fail("different Exception");
         }
     }
 
