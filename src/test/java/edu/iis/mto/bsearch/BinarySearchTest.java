@@ -13,11 +13,11 @@ public class BinarySearchTest {
 
         try{
             BinarySearch.search(key, seq);
-            assertTrue(false);
+            fail("no Exception");
         }catch (IllegalArgumentException e){
             assertTrue(true);
         }catch (Exception e){
-            assertTrue(false);
+            fail("different Exception")
         }
     }
 
@@ -68,7 +68,7 @@ public class BinarySearchTest {
         int key = 11;
 
         elementNotFound(seq, key);
-        
+
     }
 
 
